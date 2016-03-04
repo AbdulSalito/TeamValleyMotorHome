@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Order a motorhome(s)</title>
+   <link rel="stylesheet" type="text/css" href="css/main.css" id="styles" />
+
+</head>
+<body>
+<div id="outerarea">
+<div id="innerarea">
+<div id = "header">
+
+</div>
+	<div id = "navigation">
+<table class="links">
+	<tr>
+		<td class="links"><a class="nav" href = "index.html">Home </a></td>
+		<td class="links"><a class="nav" href = "motorhomes.php">Motor homes </a></td>
+		<td class="links"><a class="nav" href = "search.php">Search </a></td>
+		<td class="links"><a class="nav" href = "admin.php">Administrator </a></td>
+		<td class="links"><a class="nav" href = "orderMotor.html">Quote</a></td>
+		<td class="links"><a class="nav" href = "credits.php">Credits</a></td>
+		<td class="links"><a class="nav" href = "siteMap.html">Site Map</a></td>
+	</tr>
+</table>
+<a href="#" style="color: #457746;" onclick="document.getElementById('styles').href='css/main.css'">green</a>
+<a href="#" style="color: #0033CC;" onclick="document.getElementById('styles').href='css/blue.css'">blue</a>
+<table class="textsize">
+	<tr>
+		<td class="textsize" onclick="javascript:Font_Size('innerarea','bigger');">+</td>
+		<td class="textsize" onclick="javascript:Font_Size('innerarea','smaller');">-</td>
+	</tr>
+</table>
+</div>
+
+<div id = "maincontent">
+  <h1>Buy a Motorhome(s)</h1>
+  <form id="orderForm" action="#" onsubmit="return checksubmition('orderForm');" method="post">
+    <h2>Select a motorhome(s)</h2>
+	    <div>
+	      <h3>Cheyenne 635 <input type="checkbox" name="Cheyenne635" value="22995.99" onchange="totalCost('orderForm');" /></h3>
+	      <p>A 4 berth motorhome with over cab bed, front lounge comprises 2 bench seats in LD format. Centre kitchen with 4 burner gas hob, grill and full oven. Dedicated rear wash/shower wc room with separate shower cubicle. On board satellite system as extra</p>
+	      <h4>Price: &pound;22995.99</h4>
+	    </div>
+
+	    <div>
+	      <h3>Pace <input type="checkbox" name="Pace" value="39970.99" onchange="totalCost('orderForm');"/></h3>
+	      <p>A 2/3 berth panel van Hi Top motorhome with a front dinette that utilises driver and front passenger swivel seats. Central kitchen with 2 burner gas hob and remote grill/oven, 3 way fridge. Wash/shower/wc room is opposite the kitchen and a large transverse rear double bed which can be fixed or folded allowing storage under the bed or between the bed bases for larger items</p>
+	      <h4>Price: &pound;39970.99</h4>
+	    </div>
+
+	    <div>
+	      <h3>Stardream <input type="checkbox" name="Stardream" value="43995.99" onchange="totalCost('orderForm');"/></h3>
+	      <p>A 2 berth low profile motorhome with large front roof light. Centre kitchen with 3 burner gas hob + 1 x 240 volt hotplate, 3 way fridge. Centre wash/wc/shower room with separate shower cubicle. Large rear U shaped lounge.</p>
+	      <h4>Price: &pound;43995.99</h4>
+	    </div>
+  </div>
+
+  <div id="collection">
+    <h2>Collection method</h2>
+	    <p>Please select whether you want your chosen motorhome(s) to be delivered to your home address (a charge applies for this) or whether you want to collect it yourself.</p>
+	    <p>
+	    Home address - &pound;75.99 <input type="radio" name="deliveryType" value="home" title="75.99" onchange="totalCost('orderForm');" />&nbsp; | &nbsp;
+	    Collect from dealer - no charge <input type="radio" name="deliveryType" value="dealer" title="0" onchange="totalCost('orderForm');"/>
+	    </p>
+  </div>
+
+  <div id="checkCost">
+    <h2>Total cost</h2>
+	    Total <input type="text" name="total" id="total" size="10" readonly="readonly" />
+  </div>
+
+  <div id="placeOrder">
+    <h2>Place order</h2>
+	Your details
+	    <div id="retCustDetails">
+	    	Forename <input type="text" name="forename" id="forename" />
+	    	Surname <input type="text" name="surname" id="surname" />
+	    </div>
+	    <p id="termsID" style="color: #FF0000; font-weight: bold;">I have read and agree to the terms and conditions
+	    <input type="checkbox" id="termsChkbx" onchange="javascript:CheckTerms('termsChkbx','sub1','termsID');"></p>
+
+	    <p><input type="submit" name="submit" value="Order now!" id="sub1" disabled="disabled" /></p>
+</div>
+	<div id = "footer">
+	<p>All content copyright Team Valley Motor Homes</p>
+</div>
+</form>
+</div>
+</div>
+<script type="text/javascript" src="js/textSize.js"></script>
+<script type="text/javascript" src="js/ValidationAndCalculation.js"></script>
+</body>
+</html>
